@@ -149,15 +149,15 @@ class CopilotModal extends Component<Props, State> {
     }
 
     if (horizontalPosition === 'left') {
-      tooltip.right = Math.max(layout.width - (obj.left + obj.width), 0);
-      tooltip.right = tooltip.right === 0 ? tooltip.right + MARGIN : tooltip.right;
+      const right = Math.max(obj.right, 0);
+      tooltip.right = MARGIN;
       tooltip.maxWidth = layout.width - tooltip.right - MARGIN;
-      arrow.right = tooltip.right + MARGIN;
+      arrow.right = right + MARGIN;
     } else {
-      tooltip.left = Math.max(obj.left, 0);
-      tooltip.left = tooltip.left === 0 ? tooltip.left + MARGIN : tooltip.left;
-      tooltip.maxWidth = layout.width - tooltip.left - MARGIN;
-      arrow.left = tooltip.left + MARGIN;
+      const left = Math.max(obj.left, 0);
+      tooltip.left = MARGIN;
+      tooltip.maxWidth = layout.width - MARGIN;
+      arrow.left = left + MARGIN;
     }
 
     const animate = {

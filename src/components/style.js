@@ -23,12 +23,14 @@ export default StyleSheet.create({
     borderWidth: ARROW_SIZE,
   },
   tooltip: {
+    backgroundColor: 'rgba(255,255,255,0)',
     position: 'absolute',
+    borderRadius: 15,
     paddingTop: 15,
     paddingHorizontal: 15,
-    backgroundColor: '#fff',
-    borderRadius: 3,
     overflow: 'hidden',
+    borderWidth: 3,
+    borderColor: '#fff'
   },
   tooltipText: {
 
